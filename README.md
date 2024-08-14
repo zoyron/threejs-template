@@ -1,4 +1,4 @@
-# Three.js Boilerplate
+# Basic Three.js Template 
 
 A streamlined boilerplate for Three.js projects, designed to get you up and running quickly.
 
