@@ -25,3 +25,15 @@ npm run dev
 ```
 
 Your project is now running at http://localhost:5173 (or another port if 5173 is occupied).
+
+## Threejs Project Structure
+
+### Base Setup(includes the follows):
+- Canvas
+- Scene
+- Sizes(the object)
+
+### The Camera, and lights(optional):
+- Perspective Camera(most usualy and popular choice)
+- Lights(optional, with ambient light being the most popular choice)
+
