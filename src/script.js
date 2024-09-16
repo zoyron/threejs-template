@@ -9,6 +9,7 @@ const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xf0f0f0);
 
 // Sizes
 const sizes = {
@@ -17,7 +18,7 @@ const sizes = {
 };
 
 /**
- * Camera
+ * Camera and lights
  */
 // Perspective Camera
 const camera = new THREE.PerspectiveCamera(
@@ -29,13 +30,30 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(3, 3, 3);
 scene.add(camera);
 
+// Lights
+const light = new THREE.SpotLight(0x006769, 100);
+light.position.set(1, 1.25, 1.25);
+scene.add(light);
+
 /**
  * Adding a base mesh
  */
-const geometry = new THREE.BoxGeometry(1, 1, 1, 8, 8, 8);
-const material = new THREE.MeshNormalMaterial();
+const geometry = new THREE.DodecahedronGeometry();
+const material = new THREE.MeshLambertMaterial({
+  color: "#468585",
+  emissive: "#468585",
+});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
+
+const boxGeometry = new THREE.BoxGeometry(2, 0.1, 2);
+const boxMaterial = new THREE.MeshLambertMaterial({
+  color: "#0080fa",
+  emissive: "#0080fa",
+});
+const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
+boxMesh.position.y = -1.5;
+scene.add(boxMesh);
 
 /**
  * Renderer and Resizing
@@ -74,6 +92,7 @@ const animate = () => {
   // Rotate mesh
   mesh.rotation.x += 0.0125;
   mesh.rotation.y += 0.0125;
+  boxMesh.rotation.y += 0.00625;
 
   // Update controls
   controls.update();
