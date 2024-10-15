@@ -35,7 +35,8 @@ scene.add(camera);
 /**
  * Adding a base mesh
  */
-const geometry = new THREE.BoxGeometry(2, 2, 2, 8, 8, 8);
+const side = 1;
+const geometry = new THREE.BoxGeometry(side,side,side, 8, 8, 8);
 const material = new THREE.MeshNormalMaterial();
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
