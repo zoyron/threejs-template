@@ -1,5 +1,7 @@
 # Basic Three.js Template
 
+## Now supports TypeScript as well
+
 A streamlined boilerplate for Three.js projects, designed to get you up and running quickly.
 
 ![Boilerplate demo](./static/boilerplate.gif)
