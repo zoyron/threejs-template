@@ -10,13 +10,13 @@
   },
   "devDependencies": {
     "typescript": "^5.5.3",
-    "vite": "^5.3.3",
+    "vite": "^6.2.0",
     "vite-plugin-glsl": "^1.3.0",
     "vite-plugin-restart": "^0.4.1"
   },
   "dependencies": {
     "@types/three": "^0.169.0",
-    "lil-gui": "^0.19.2",
-    "three": "^0.169.0"
+    "lil-gui": "^0.20.0",
+    "three": "^0.174.0"
   }
 }
